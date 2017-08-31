@@ -1,0 +1,13 @@
+{
+  "name": "drjhopkins",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Josue Daniel Bustamante",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node app2.js"
+  },
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
