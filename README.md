@@ -58,4 +58,3 @@ module.exports = { subdomain, auth, forms, montly, month, year };
 ##
 ### Contributors
 * Josue Daniel Bustamante: [JosueDanielBust](https://github.com/josuedanielbust)
-* Jesse Cogollo: [jessecogollo](https://github.com/jessecogollo)
