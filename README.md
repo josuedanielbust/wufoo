@@ -1,4 +1,4 @@
-# Pull leads from Wordpress Contact Forms
+# Pull leads from Wufoo Contact Forms
 
 ##
 1. First of all you need to install the latest version of NodeJS.
@@ -17,18 +17,31 @@
 
 ```javascript
 'use strict';
-// Data of connection to the database
-let host     = 'localhost',
-	user     = 'user',
-	password = 'password',
-	database = 'database';
 
-// Month
-// Number of the month without 0 (zero)
-let year	= 2017,
-	month	= 3;
-    
-module.exports = { host, user, password, database, year, month };
+/* ---------------------------------------------\
+\	- Configurations of Script					/
+/	- Change only the next lines				\
+\----------------------------------------------*/
+
+let subdomain = 'Wufoo_Subdomain';
+let auth = {
+	'username': 'Wufoo_API_KEY',
+	'password': 'Wufoo_Account_Password',
+	'sendImmediately': false
+}
+let forms = ['Form_Hash'];
+
+// The month to generate reports
+let montly = true;
+let month = '6';
+let year = '2017';
+
+/* ---------------------------------------------\
+\	- Easy? This is all the config...			/
+/	- Don't touch anything after this line		\
+\----------------------------------------------*/
+
+module.exports = { subdomain, auth, forms, montly, month, year };
 ```
 
 6. Run using the ```npm start``` command
@@ -39,7 +52,7 @@ module.exports = { host, user, password, database, year, month };
 ##
 ### Dependencies
 
-* mysql: ^2.13.0 => [https://www.npmjs.com/package/mysql](https://www.npmjs.com/package/mysql)
+* request: ^2.81.0 => [https://www.npmjs.com/package/request](https://www.npmjs.com/package/request)
 
 
 ##
